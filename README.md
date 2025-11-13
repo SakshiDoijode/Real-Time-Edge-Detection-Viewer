@@ -81,31 +81,27 @@ Browser Output
 
 ## 4. Project Structure
 
-### 4.1 Android
-
-
-/android
-└── app/src/
-├── main/java
-├── main/cpp
-└── main/gl
-
-
-
-### 4.2 Web
-
-
-/web
-├── src/
-│    ├── app.ts
-│    ├── edge-detection.ts
-│    ├── opencv-processor.ts
-│    ├── webgl-renderer.ts
-│    └── types.ts
-├── index.html
-├── serve.py
-├── package.json
-└── tsconfig.json
+project/
+├── android/
+│   └── app/
+│       └── src/
+│           ├── main/java/
+│           ├── main/cpp/
+│           └── main/gl/
+│
+├── web/
+│   ├── src/
+│   │   ├── app.ts
+│   │   ├── edge-detection.ts
+│   │   ├── opencv-processor.ts
+│   │   ├── webgl-renderer.ts
+│   │   └── types.ts
+│   ├── index.html
+│   ├── serve.py
+│   ├── package.json
+│   └── tsconfig.json
+│
+└── README.md
 
 
 
