@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Edge Detection | TypeScript + OpenCV</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- OpenCV.js - C++ compiled to WebAssembly -->
+    <script async src="https://docs.opencv.org/4.8.0/opencv.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Real-Time Edge Detection</h1>
+            <p class="subtitle">TypeScript + OpenCV C++ (WebAssembly) + OpenGL ES 2.0!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-section">
+                <div class="video-container">
+                    <h2>Original Feed</h2>
+                    <video id="webcam" autoplay playsinline style="display: none;"></video>
+                    <canvas id="inputCanvas"></canvas>
+                </div>
+                
+                <div class="video-container">
+                    <h2>Edge Detection Output</h2>
+                    <canvas id="outputCanvas"></canvas>
+                    <div class="fps-counter">FPS: <span id="fpsDisplay">0</span></div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="control-group">
+                    <h3>Processing Mode</h3>
+                    <div class="algorithm-buttons">
+                        <button id="opencvModeBtn" class="algorithm-btn active">
+                            🚀 OpenCV C++ (WebAssembly)
+                        </button>
+                        <button id="typescriptModeBtn" class="algorithm-btn">
+                            📝 TypeScript (Pure JS)
+                        </button>
+                    </div>
+                    <p style="font-size: 0.9em; color: #aaa; margin-top: 10px;">
+                        <span id="modeStatus">⏳ Loading OpenCV.js...</span>
+                    </p>
+                </div>
+
+                <div class="control-group">
+                    <h3>Algorithm Selection</h3>
+                    <div class="algorithm-buttons">
+                        <button id="sobelBtn" class="algorithm-btn active" data-method="sobel">
+                            Sobel Edge Detection
+                        </button>
+                        <button id="cannyBtn" class="algorithm-btn" data-method="canny">
+                            Canny Edge Detection
+                        </button>
+                        <button id="robertsBtn" class="algorithm-btn" data-method="roberts">
+                            Roberts Cross
+                        </button>
+                        <button id="prewittBtn" class="algorithm-btn" data-method="prewitt">
+                            Prewitt Operator
+                        </button>
+                        <button id="laplacianBtn" class="algorithm-btn" data-method="laplacian">
+                            Laplacian
+                        </button>
+                        <button id="grayscaleBtn" class="algorithm-btn" data-method="grayscale">
+                            Grayscale (OpenCV only)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Detection Parameters</h3>
+                    <div class="slider-control">
+                        <label>
+                            <span>Threshold</span>
+                            <span id="thresholdValue">40</span>
+                        </label>
+                        <input type="range" id="threshold" min="10" max="100" value="40">
+                    </div>
+                    <div class="slider-control">
+                        <label>
+                            <span>Blur Amount</span>
+                            <span id="blurValue">1</span>
+                        </label>
+                        <input type="range" id="blur" min="0" max="5" value="1">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Camera Control</h3>
+                    <button id="startBtn" class="action-btn primary">Start Camera</button>
+                    <button id="stopBtn" class="action-btn secondary" disabled>Stop Camera</button>
+                    <button id="captureBtn" class="action-btn tertiary" disabled>Capture Screenshot</button>
+                </div>
+
+                <div class="info-panel control-group">
+                    <h3>ℹ️ Features</h3>
+                    <p><strong>✅ Fully Type-Safe:</strong> All code is written in TypeScript with strict type checking enabled.</p>
+                    <p><strong>🚀 OpenCV C++ (WebAssembly):</strong> Native C++ performance in the browser for ultra-fast processing.</p>
+                    <p><strong>🎮 OpenGL ES 2.0:</strong> Hardware-accelerated GPU rendering using WebGL shaders (10-30+ FPS).</p>
+                    <p><strong>🔧 6 Algorithms:</strong><br>
+                    • Sobel (gradient-based)<br>
+                    • Canny (multi-stage)<br>
+                    • Roberts Cross (fast)<br>
+                    • Prewitt (balanced)<br>
+                    • Laplacian (second derivative)<br>
+                    • Grayscale (OpenCV C++)</p>
+                    <p><strong>⌨️ Shortcuts:</strong> S = Start/Stop | C = Capture</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status-message">Ready! Click "Start Camera" to begin.</div>
+    </div>
+
+    <script type="module" src="dist/app.js"></script>
+</body>
+</html>
+

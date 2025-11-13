@@ -1,0 +1,7 @@
+# Python requirements for FlamApp
+# This project uses only Python standard library modules
+# Python 3.6+ is required
+
+# No external dependencies are needed for serve.py
+# All imports (http.server, socketserver, os, sys) are built-in modules
+
