@@ -1,6 +1,7 @@
 🔍 Real-Time Edge Detection Viewer
 
 📱 Android (OpenCV C++ + OpenGL ES + JNI) 
+
 🌐 Web (TypeScript)
 
 This project implements a real-time edge detection pipeline using OpenCV in C++, rendered using OpenGL ES, with a TypeScript-based Web Viewer for visualization.
