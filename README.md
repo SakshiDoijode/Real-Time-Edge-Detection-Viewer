@@ -72,10 +72,7 @@ Static processed frame preview
 FPS counter
 
 Resolution info
-
 📁 Project Structure
-
-
 /
 ├── android/
 │   ├── app/src/main/java/  (Camera + JNI bridge)
@@ -96,6 +93,7 @@ Resolution info
 │   └── serve.py
 │
 └── README.md
+
 
 📸 Screenshots / Demo
 
