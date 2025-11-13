@@ -48,36 +48,32 @@ The Real-Time Edge Detection Viewer provides:
 ## 3. Architecture
 
 ### 3.1 Android Processing Pipeline
+Camera2 API  
+    ↓  
+TextureView (camera preview)  
+    ↓  
+JNI (frame buffer transfer)  
+    ↓  
+OpenCV C++ (Grayscale / Canny processing)  
+    ↓  
+RGBA output buffer  
+    ↓  
+OpenGL ES Renderer  
+    ↓  
+Display on Android screen  
 
-
-Camera2 API
-↓
-TextureView (camera preview)
-↓
-JNI (frame buffer transfer)
-↓
-OpenCV C++ (Grayscale / Canny processing)
-↓
-RGBA output buffer
-↓
-OpenGL ES Renderer
-↓
-Display on Android screen
-
-
+---
 
 ### 3.2 Web Processing Pipeline
-
-
-Webcam (getUserMedia)
-↓
-HTML Canvas
-↓
-Edge Detection (TS Algorithms or OpenCV WebAssembly)
-↓
-WebGL Renderer
-↓
-Browser Output
+Webcam (getUserMedia)  
+    ↓  
+HTML Canvas  
+    ↓  
+Edge Detection (TS Algorithms or OpenCV WebAssembly)  
+    ↓  
+WebGL Renderer  
+    ↓  
+Browser Output
 
 
 
