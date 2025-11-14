@@ -3,6 +3,7 @@
  * Renders processed images as textures using WebGL
  */
 
+
 export class WebGLRenderer {
     private gl: WebGLRenderingContext;
     private program: WebGLProgram;
