@@ -4,6 +4,7 @@ Run the web app locally with TypeScript build and a local server, then verify we
 
 ## Prerequisites
 
+
 * Install `Node.js` (14+) and `Python` (3.6+)
 
 * Use a modern browser (Chrome/Edge) with a webcam
