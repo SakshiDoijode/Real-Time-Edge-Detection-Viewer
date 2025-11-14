@@ -4,6 +4,7 @@ Simple HTTP server for the Edge Detection web application.
 This server enables CORS and proper MIME types for WebAssembly.
 """
 
+
 import http.server
 import socketserver
 import os
