@@ -44,10 +44,23 @@ The Real-Time Edge Detection Viewer provides:
 - Built-in FPS counter and resolution display  
 
 ---
+---
 
-## 3. Architecture
+## 3. Screenshots
 
-### 3.1 Android Processing Pipeline
+<img width="1843" height="996" alt="Screenshot 2025-11-14 135327" src="https://github.com/user-attachments/assets/d9af391b-f5cb-4f0a-b59d-57760fd55bfc" />
+
+<img width="1814" height="784" alt="Screenshot 2025-11-14 135450" src="https://github.com/user-attachments/assets/49484c08-938f-4435-99fc-b9d963c1a35f" />
+
+<img width="1854" height="995" alt="image" src="https://github.com/user-attachments/assets/83041282-02fe-4891-8e67-1a06663ac835" />
+
+
+
+---
+
+## 4. Architecture
+
+### 4.1 Android Processing Pipeline
 Camera2 API  
     ↓  
 TextureView (camera preview)  
@@ -64,7 +77,7 @@ Display on Android screen
 
 ---
 
-### 3.2 Web Processing Pipeline
+### 4.2 Web Processing Pipeline
 Webcam (getUserMedia)  
     ↓  
 HTML Canvas  
@@ -79,7 +92,7 @@ Browser Output
 
 ---
 
-## 4. Project Structure
+## 5. Project Structure
 
 
 <img width="399" height="804" alt="image" src="https://github.com/user-attachments/assets/0dedb4b5-13da-4e2c-8dae-c4abd8717437" />
@@ -92,9 +105,9 @@ Browser Output
 
 ---
 
-## 5. Setup Instructions
+## 6. Setup Instructions
 
-### 5.1 Android Setup (NDK + OpenCV)
+### 6.1 Android Setup (NDK + OpenCV)
 
 #### Requirements
 - Android Studio  
@@ -116,7 +129,7 @@ app/src/main/cpp/opencv/
 
 ---
 
-### 5.2 Web Viewer Setup (TypeScript)
+### 6.2 Web Viewer Setup (TypeScript)
 
 #### Installation
 sh
@@ -140,7 +153,7 @@ http://localhost:8000
 
 ---
 
-## 6. Key Files
+## 7. Key Files
 
 ### Android
 
@@ -155,19 +168,7 @@ http://localhost:8000
 * opencv-processor.ts — WebAssembly OpenCV integration
 * app.ts — Main application controller
 
----
 
-## 7. Screenshots
-
-<img width="1843" height="996" alt="Screenshot 2025-11-14 135327" src="https://github.com/user-attachments/assets/d9af391b-f5cb-4f0a-b59d-57760fd55bfc" />
-
-<img width="1814" height="784" alt="Screenshot 2025-11-14 135450" src="https://github.com/user-attachments/assets/49484c08-938f-4435-99fc-b9d963c1a35f" />
-
-<img width="1854" height="995" alt="image" src="https://github.com/user-attachments/assets/83041282-02fe-4891-8e67-1a06663ac835" />
-
-
-
----
 
 ## 8. Technologies Used
 
