@@ -1,4 +1,5 @@
 {
+  
   "name": "edge-detection-typescript",
   "version": "1.0.0",
   "description": "Real-time edge detection web application using TypeScript",
